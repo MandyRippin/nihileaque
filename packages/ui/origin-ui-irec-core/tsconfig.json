@@ -1,0 +1,14 @@
+{
+    "extends": "../../../tsconfig.json",
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "module": "es2015",
+        "moduleResolution": "node",
+        "declaration": true,
+        "noImplicitAny": false,
+        "composite": true,
+        "types": ["jest"],
+        "skipLibCheck": true
+    },
+    "include": ["./src/**/*"]
+}

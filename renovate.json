@@ -1,0 +1,41 @@
+{
+    "extends": ["config:base"],
+    "schedule": ["every weekend"],
+    "ignoreDeps": ["solc", "@date-io/moment", "@nestjs-modules/mailer"],
+    "labels": ["dependencies"],
+    "packageRules": [
+        {
+            "packagePatterns": ["eslint"],
+            "groupName": "eslint"
+        },
+        {
+            "packagePatterns": ["webpack", "-loader"],
+            "groupName": "webpack"
+        },
+        {
+            "packagePatterns": ["ethers"],
+            "groupName": "ethers",
+            "enabled": false
+        },
+        {
+            "packagePatterns": ["nestjs"],
+            "groupName": "nestjs"
+        },
+        {
+            "packagePatterns": ["solc"],
+            "groupName": "solc"
+        },
+        {
+            "packagePatterns": ["jest"],
+            "groupName": "jest"
+        },
+        {
+            "packagePatterns": ["react", "redux"],
+            "groupName": "react"
+        },
+        {
+            "updateTypes": ["minor", "patch", "pin", "digest"],
+            "automerge": true
+        }
+    ]
+}
